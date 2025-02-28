@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola Store</title>
+    <link rel="stylesheet" href="css.css">
+  
+</head>
+<body>
+    <header>
+        <h1>Coca-Cola Store</h1>
+        <div id="cart-container">
+            <button onclick="viewCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="product-list">
+            <div class="product">
+                <img src="cokaonw.jpg" alt="Coca-Cola Bottle">
+                <h2>Coca-Cola Classic</h2>
+                <p>$1.50</p>
+                <button onclick="addToCart('Coca-Cola Classic', 1.50)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="coca zero.jpg" alt="Coca-Cola Zero">
+                <h2>Coca-Cola Zero</h2>
+                <p>$1.40</p>
+                <button onclick="addToCart('Coca-Cola Zero', 1.40)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="dite coka.jpg" alt="Diet Coke">
+                <h2>Diet Coke</h2>
+                <p>$1.30</p>
+                <button onclick="addToCart('Diet Coke', 1.30)">Add to Cart</button>
+            </div>
+        </section>
+
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeCart()">&times;</span>
+                <h2>Your Cart</h2>
+                <ul id="cart-items">
+                    <!-- Cart items will appear here -->
+                </ul>
+                <p>Total: $<span id="total-price">0.00</span></p>
+                <button onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.java"></script>
+</body>
+</html>
